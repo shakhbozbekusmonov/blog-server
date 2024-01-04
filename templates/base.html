@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<!-- HEADER START -->
+<header class="py-10 mb-5">
+    <div class="flex justify-center">
+        <div>
+            {% load static %}
+            <img class="rounded-full mb-5 mx-auto" src="{% static '/images/miracle.jpg' %}" width="150" height="150" alt="Shakhbozbek Usmonov image">
+
+            <h1 class="text-3xl text-dark font-bold">Shakhbozbek Usmonov</h1>
+        </div>
+    </div>
+</header>
+<!-- HEADER END -->
+
+<main>
+    <div class="max-w-2xl mx-auto">
+        {% block content %}
+        {% endblock content %}
+    </div>
+</main>
+
+</body>
+</html>
