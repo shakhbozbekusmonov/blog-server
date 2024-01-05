@@ -53,6 +53,18 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'config.urls'
 
+CSRF_TRUSTED_ORIGINS = [
+    'http://blog-server-production-5ac2.up.railway.app',
+    'https://blog-server-production-5ac2.up.railway.app',
+
+]
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_HSTS_PRELOAD = True
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -70,10 +82,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
-
-CSRF_TRUSTED_ORIGINS = [
-    'https://blog-server-production-5ac2.up.railway.app'
-]
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
