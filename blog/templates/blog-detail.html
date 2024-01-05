@@ -3,9 +3,11 @@
 {% block title %}{{ blog.title }}{% endblock %}
 
 {% block content %}
-  <h2>{{ blog.title }}</h2>
-  <h3>{{ blog.author }}</h3>
-  <div class="prose">{{ blog.text|safe }}</div>
+  <h2 class="mb-5 text-3xl font-bold">{{ blog.title }}</h2>
 
-  <a href="{% url 'blog-list' %}">← Back to home</a>
+  <time class="text-gray-400 mb-5 inline-block text-xl">{{ blog.created_at }}</time>
+
+  <div class="prose mb-10">{{ blog.text|safe }}</div>
+
+  <a class="text-lg mb-10 inline-block text-blue-600" href="{% url 'blog-list' %}">← Back to home</a>
 {% endblock %}
