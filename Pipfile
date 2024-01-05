@@ -8,6 +8,9 @@ django = "*"
 python-decouple = "*"
 django-tailwind = "*"
 tailwind = "*"
+django-ckeditor = "*"
+pillow = "*"
+whitenoise = "*"
 
 [dev-packages]
 

@@ -5,7 +5,7 @@
 {% block content %}
   <h2>{{ blog.title }}</h2>
   <h3>{{ blog.author }}</h3>
-  <p>{{ blog.text }}</p>
+  <div class="prose">{{ blog.text|safe }}</div>
 
   <a href="{% url 'blog-list' %}">← Back to home</a>
 {% endblock %}
