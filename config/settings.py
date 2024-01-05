@@ -17,7 +17,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', 'https://blog-server-production-5ac2.up.railway.app']
 
 
 # Application definition
@@ -71,6 +71,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://blog-server-production-5ac2.up.railway.app'
+]
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
